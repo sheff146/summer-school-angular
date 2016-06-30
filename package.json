@@ -1,5 +1,5 @@
 {
-  "name": "ng-start",
+  "name": "summer-school-angular",
   "version": "0.0.1",
   "scripts": {
     "postinstall": "bower install",
@@ -8,10 +8,6 @@
     "serve.prod": "gulp --env=prod serve-dist",
     "build.dev": "gulp build",
     "build.prod": "gulp --env=prod build",
-    "test.unit.once": "gulp test-unit-once",
-    "test.unit.tdd": "gulp test-unit-tdd",
-    "test.e2e.dev": "gulp test-e2e-src",
-    "test.e2e.prod": "gulp --env=prod test-e2e-dist",
     "fake-api": "gulp fake-api",
     "demo": "gulp demo",
     "clean": "gulp clean"
@@ -21,8 +17,6 @@
     "connect-modrewrite": "0.9.0",
     "browser-sync": "2.13.0",
     "del": "2.2.0",
-    "jasmine-core": "2.4.1",
-    "jasmine-spec-reporter": "2.5.0",
     "grunt": "1.0.1",
     "grunt-contrib-clean": "1.0.0",
     "grunt-contrib-connect": "1.0.2",
@@ -49,16 +43,8 @@
     "gulp-uglify": "1.5.3",
     "gulp-useref": "3.1.0",
     "gulp-util": "3.0.7",
-    "karma": "1.1.0",
-    "karma-chrome-launcher": "1.0.1",
-    "karma-firefox-launcher": "1.0.0",
-    "karma-jasmine": "1.0.2",
-    "karma-junit-reporter": "1.0.0",
-    "karma-phantomjs-launcher": "1.0.0",
     "lodash": "4.13.1",
     "main-bower-files": "2.13.1",
-    "phantomjs-prebuilt": "2.1.7",
-    "protractor": "3.3.0",
     "require-dir": "0.3.0",
     "run-sequence": "1.2.1",
     "wiredep": "4.0.0"
@@ -68,7 +54,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:apigraf/ng-start.git"
+    "url": "git@github.com:xsolla/summer-school-angular.git"
   },
   "license": "MIT"
 }
