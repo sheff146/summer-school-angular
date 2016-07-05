@@ -8,6 +8,7 @@
     "modernizr": "2.8.3",
     "lodash": "4.13.1",
     "jquery": "2.2.4",
+    "bootstrap": "3.3.6",
     "angular": "1.5.6",
     "angular-translate": "2.11.0",
     "angular-translate-interpolation-messageformat": "2.11.0",
@@ -24,6 +25,12 @@
   "overrides": {
     "json5": {
       "main": "lib/json5.js"
+    },
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
     }
   }
 }

@@ -1,5 +1,7 @@
-.navigation-bar
-    ul.navigation-bar-menu
-        li.navigation-bar-menu-item(ng-repeat="section in sections", ng-class="{'navigation-bar-menu-item__active': section.state === currentState}")
-            a.navigation-bar-menu-item-link(ng-href="{{section.state}}")
-                span(ng-bind="section.title | translate")
+nav.navbar.navbar-default
+    .container-fluid
+        .navbar-header
+            a.navbar-brand(href="home") Летняя школа 2016
+        ul.nav.navbar-nav
+            li(ng-repeat="section in sections", ng-class="{'active': section.state === currentState}")
+                a(ng-href="{{section.state}}", ng-bind="section.title | translate")

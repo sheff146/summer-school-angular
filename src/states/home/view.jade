@@ -1,8 +1,11 @@
-.page.page__home
-    .page-header
-        navigation-bar(sections="appSections", current-state="currentState")
-    .page-content
-        h1(data-translate="PAGE_TITLE_HOME")
+navigation-bar(sections="appSections", current-state="currentState")
+.container
+    h1(data-translate="PAGE_TITLE_HOME")
+    div.content
 
-        p(ng-bind="demoText | translate:{DATA: 'я_переменная_в_метке_локализации'}")
-    .page-footer
+        // Несколько примеров использования возможностей AngularJS. Для простоты не используем переводы.
+        p Несколько примеров. Смотрим исходный код.
+
+        .example
+            h4 Использование переменных в метках локализации
+            span(ng-bind="demoText | translate:{DATA: 'я_переменная_в_метке_локализации'}")
