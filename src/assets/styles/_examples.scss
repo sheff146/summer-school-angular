@@ -1,0 +1,8 @@
+$example_padding: 10px;
+$example_border-color: #e7e7e7;
+
+.example {
+  padding-top: $example_padding;
+  padding-bottom: $example_padding;
+  border-top: 1px solid $example_border-color;
+}

@@ -3,8 +3,67 @@ navigation-bar(sections="appSections", current-state="currentState")
     h1(data-translate="PAGE_TITLE_HOME")
     div.content
 
-        // Несколько примеров использования возможностей AngularJS. Для простоты не используем переводы.
+        // Несколько примеров использования возможностей AngularJS. Для простоты не используем переводы (локализацию).
         p Несколько примеров. Смотрим исходный код.
+
+        .example
+            h4 Изменение модели и отображение на странице
+
+            // Меняем модель через input
+            input(ng-model="demoModel1")
+            br
+
+            // Выводим результат в шаблоне
+            span {{demoModel1}}
+            br
+
+            // Выводим результат, используя директиву ngBind
+            span(ng-bind="demoModel1")
+            br
+
+            // Тоже самое, но с приветствием
+            span Привет, {{demoModel1}}!
+            br
+            // Приветствие через ngBind
+            span Привет,&nbsp;
+            span(ng-bind="demoModel1")
+            span !
+            br
+            // ...или
+            span(ng-bind="'Привет, ' + demoModel1 + '!'")
+            br
+
+            // Добавляем немного логики
+            span(ng-bind="'Привет' + (demoModel1 ? ', ' + demoModel1 : '')  + '!'")
+
+        .example
+            h4 Изменение модели в контроллере и отображение на странице
+
+            span(ng-bind="demoModel2")
+            br
+            span(ng-bind="demoModel3.demoText")
+            br
+            span(ng-bind="demoModel3.demoProducts[0].name")
+
+        .example
+            h4 Работа с массивами, вывод списка с использованием директивы ngRepeat
+
+            ul
+                li(ng-repeat="product in demoModel3.demoProducts")
+                    span(ng-bind="product.name")
+
+        .example
+            h4 Использование директивы ngIf и ngShow
+
+            // ngIf
+            ul
+                li(ng-repeat="product in demoModel3.demoProducts", ng-if="product.category == 'Фрукты'")
+                    span(ng-bind="product.name")
+
+            // ngShow
+            ul
+                li(ng-repeat="product in demoModel3.demoProducts", ng-show="product.category == 'Фрукты'")
+                    span(ng-bind="product.name")
 
         .example
             h4 Использование переменных в метках локализации
