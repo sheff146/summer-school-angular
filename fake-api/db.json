@@ -8,6 +8,7 @@
       "DEMO_DATA": "Это перевод текста. И переменная вставленная в него: {DATA}.",
       "PAGE_TITLE_HOME": "Главная",
       "PAGE_TITLE_ABOUT": "О проекте",
+      "PAGE_TITLE_CALC": "Калькулятор",
       "PAGE_ERROR_MESSAGE": "Произошла ошибка",
       "INDEX_LOADER_TEXT": "Загрузка...",
       "PAGE_ABOUT_CONTENT": "<p>Это учебный проект. Создавался специально для <strong>Летней школы 2016</strong> компании <strong>Xsolla</strong>.</p><p>Подробности здесь: <a href='http://apigraf.github.io/summer-school-angular/'>apigraf.github.io/summer-school-angular</a>.</p>"

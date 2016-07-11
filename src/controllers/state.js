@@ -16,6 +16,10 @@ angular.module('ngs.controllers').provider('StateCtrl', function () {
                         title: 'PAGE_TITLE_HOME'
                     },
                     {
+                        state: 'calc',
+                        title: 'PAGE_TITLE_CALC'
+                    },
+                    {
                         state: 'about',
                         title: 'PAGE_TITLE_ABOUT'
                     }

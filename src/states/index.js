@@ -36,6 +36,16 @@ angular.module('ngs.states', ['ui.router']).config(function ($stateProvider, $ur
                 return initialize();
             }
         }
+    }).state('calc', {
+        url: '/calc',
+        abstract: false,
+        templateUrl: 'states/calc/view.html',
+        controller: 'calcCtrl',
+        resolve: {
+            generic: function (initialize) {
+                return initialize();
+            }
+        }
     }).state('error', {
         url: '/error',
         abstract: false,
