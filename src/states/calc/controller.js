@@ -18,6 +18,7 @@ angular.module('ngs.states').controller('calcCtrl', function ($scope, StateCtrl,
                 period: 20          // срок выплат (лет)
             };
 
+            // Отлавливаем событие, отправленное от компонента "Кредитного калькулятора"
             $rootScope.$on('mortgageCalculator:changeData', (event, data) => {
                 // Определяем параметры ипотечного кредита
                 var rate = 13.5;    // процентная ставка (%)
