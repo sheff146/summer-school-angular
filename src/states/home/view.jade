@@ -1,7 +1,7 @@
 navigation-bar(sections="appSections", current-state="currentState")
 .container
     h1(data-translate="PAGE_TITLE_HOME")
-    div.content
+    .content
 
         // Несколько примеров использования возможностей AngularJS. Для простоты не используем переводы (локализацию).
         p Несколько примеров. Смотрим исходный код.
@@ -68,3 +68,13 @@ navigation-bar(sections="appSections", current-state="currentState")
         .example
             h4 Использование переменных в метках локализации
             span(ng-bind="demoText | translate:{DATA: 'я_переменная_в_метке_локализации'}")
+
+        .example
+            h4 Полная документация API AngularJS
+            a(href="https://docs.angularjs.org/api", target="_blank") docs.angularjs.org/api
+
+    .footer
+        hr
+        span &copy;&nbsp;2016,&nbsp;
+        a(href="https://github.com/apigraf") Алексей Пихтовников
+        span &nbsp;для &laquo;Xsolla Summer School 2016&raquo;
