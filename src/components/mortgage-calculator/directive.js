@@ -10,14 +10,15 @@
 
 angular.module('ngs.components').directive('mortgageCalculator', function () {
     return {
-        restrict: 'E',
-        templateUrl: 'components/mortgage-calculator/view.html',
-        controller: 'mortgageCalculatorCtrl',
+        restrict: 'E', // отслеживаем директивы, вызванные как элемент
+        templateUrl: 'components/mortgage-calculator/view.html', // указываем шаблон компонента
+        controller: 'mortgageCalculatorCtrl', // указываем контроллер, используемый для обработки логики
         scope: {
-            default: '<',
-            result: '<'
+            default: '<', // для получения данных "по умолчанию"
+            result: '<' // результаты вычислений
         },
         link: function (scope, element, attrs) {
+            // Здесь может быть обработка DOM
         }
     }
 });
