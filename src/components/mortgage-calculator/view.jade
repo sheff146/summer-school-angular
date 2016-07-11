@@ -1,3 +1,58 @@
 .mortgage-calculator
     h4(data-translate="MORTGAGE_CALCULATOR.TITLE")
     p(data-translate="MORTGAGE_CALCULATOR.DESCRIPTION")
+    hr
+    .form-horizontal
+        .form-group
+            label.col-sm-4.control-label(data-translate="MORTGAGE_CALCULATOR.KIND_OF_CALCULATION_LABEL")
+            .col-sm-4
+                p.form-control-static
+                    span(data-translate="MORTGAGE_CALCULATOR.KIND_OF_CALCULATION_VALUE_1")
+        .form-group
+            label.col-sm-4.control-label(data-translate="MORTGAGE_CALCULATOR.PRICE_LABEL")
+            .col-sm-4
+                .input-group
+                    input.form-control(type="number", ng-model="data.price")
+                    span.input-group-addon(data-translate="MORTGAGE_CALCULATOR.CURRENCY_UNIT")
+        .form-group
+            label.col-sm-4.control-label(data-translate="MORTGAGE_CALCULATOR.FIRST_PAYMENT")
+            .col-sm-4
+                .input-group
+                    input.form-control(type="number", ng-model="data.firstPayment")
+                    span.input-group-addon(data-translate="MORTGAGE_CALCULATOR.PERCENT_UNIT")
+        .form-group
+            label.col-sm-4.control-label(data-translate="MORTGAGE_CALCULATOR.PERIOD")
+            .col-sm-4
+                .input-group
+                    input.form-control(type="number", ng-model="data.period")
+                    span.input-group-addon(data-translate="MORTGAGE_CALCULATOR.PERIOD_UNIT")
+
+    .result.form-horizontal
+        .form-group
+            label.col-sm-4.control-label(data-translate="MORTGAGE_CALCULATOR.LOAN_AMOUNT")
+            .col-sm-4
+                p.form-control-static
+                    span(ng-bind="result.loanAmount | formattedNumber:0")
+                    span &nbsp;
+                    span(data-translate="MORTGAGE_CALCULATOR.CURRENCY_UNIT")
+        .form-group
+            label.col-sm-4.control-label(data-translate="MORTGAGE_CALCULATOR.MONTHLY_PAYMENT")
+            .col-sm-4
+                p.form-control-static
+                    span(ng-bind="result.monthlyPayment | formattedNumber")
+                    span &nbsp;
+                    span(data-translate="MORTGAGE_CALCULATOR.CURRENCY_UNIT")
+        .form-group
+            label.col-sm-4.control-label(data-translate="MORTGAGE_CALCULATOR.REQUIRED_MONTHLY_INCOME")
+            .col-sm-4
+                p.form-control-static
+                    span(ng-bind="result.requiredMonthlyIncome | formattedNumber")
+                    span &nbsp;
+                    span(data-translate="MORTGAGE_CALCULATOR.CURRENCY_UNIT")
+        .form-group
+            label.col-sm-4.control-label(data-translate="MORTGAGE_CALCULATOR.INTEREST_RATE")
+            .col-sm-4
+                p.form-control-static
+                    span(ng-bind="result.rate | formattedNumber:1")
+                    span &nbsp;
+                    span(data-translate="MORTGAGE_CALCULATOR.PERCENT_UNIT")

@@ -14,6 +14,8 @@ angular.module('ngs.components').directive('mortgageCalculator', function () {
         templateUrl: 'components/mortgage-calculator/view.html',
         controller: 'mortgageCalculatorCtrl',
         scope: {
+            default: '<',
+            result: '<'
         },
         link: function (scope, element, attrs) {
         }

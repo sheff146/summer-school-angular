@@ -1,11 +1,9 @@
 @charset "UTF-8";
 
+@import 'variables';
+
 @import 'examples';
 @import 'footer';
 
 // Components
 @import 'components/mortgage-calculator';
-
-body {
-  background: #ffffff;
-}
