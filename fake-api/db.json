@@ -11,23 +11,7 @@
       "PAGE_TITLE_CALC": "Калькулятор",
       "PAGE_ERROR_MESSAGE": "Произошла ошибка",
       "INDEX_LOADER_TEXT": "Загрузка...",
-      "PAGE_ABOUT_CONTENT": "<p>Это учебный проект. Создавался специально для <strong>Летней школы 2016</strong> компании <strong>Xsolla</strong>.</p><p>Подробности здесь: <a href='http://apigraf.github.io/summer-school-angular/'>apigraf.github.io/summer-school-angular</a>.</p>",
-      "MORTGAGE_CALCULATOR": {
-        "TITLE": "Ипотечный калькулятор",
-        "DESCRIPTION": "При помощи данного калькулятора ипотеки вы можете подобрать программу ипотечного кредитования, получить предварительный расчет доступной суммы кредита, размера ежемесячных платежей и процентной ставки.",
-        "KIND_OF_CALCULATION_LABEL": "Вид расчёта",
-        "KIND_OF_CALCULATION_VALUE_1": "По стоимости недвижимости",
-        "PRICE_LABEL": "Стоимость недвижимости",
-        "FIRST_PAYMENT": "Первоначальный платёж",
-        "PERIOD": "Срок",
-        "LOAN_AMOUNT": "Размер кредита",
-        "MONTHLY_PAYMENT": "Ежемесячный платёж",
-        "REQUIRED_MONTHLY_INCOME": "Необходимый ежемесячный доход",
-        "INTEREST_RATE": "Ставка по кредиту",
-        "CURRENCY_UNIT": "руб.",
-        "PERCENT_UNIT": "%",
-        "PERIOD_UNIT": "лет"
-      }
+      "PAGE_ABOUT_CONTENT": "<p>Это учебный проект. Создавался специально для <strong>Летней школы 2016</strong> компании <strong>Xsolla</strong>.</p><p>Подробности здесь: <a href='http://apigraf.github.io/summer-school-angular/'>apigraf.github.io/summer-school-angular</a>.</p>"
     }
   }
 }

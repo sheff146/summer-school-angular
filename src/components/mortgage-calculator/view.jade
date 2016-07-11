@@ -1,58 +1,50 @@
 .mortgage-calculator
-    h4(data-translate="MORTGAGE_CALCULATOR.TITLE")
-    p(data-translate="MORTGAGE_CALCULATOR.DESCRIPTION")
+    h4 Ипотечный калькулятор
+    p При помощи данного калькулятора ипотеки вы можете подобрать программу ипотечного кредитования, получить предварительный расчет доступной суммы кредита, размера ежемесячных платежей и процентной ставки.
     hr
     .form-horizontal
         .form-group
-            label.col-sm-4.control-label(data-translate="MORTGAGE_CALCULATOR.KIND_OF_CALCULATION_LABEL")
+            label.col-sm-4.control-label Вид расчёта
             .col-sm-4
                 p.form-control-static
-                    span(data-translate="MORTGAGE_CALCULATOR.KIND_OF_CALCULATION_VALUE_1")
+                    span По стоимости недвижимости
         .form-group
-            label.col-sm-4.control-label(data-translate="MORTGAGE_CALCULATOR.PRICE_LABEL")
+            label.col-sm-4.control-label Стоимость недвижимости
             .col-sm-4
                 .input-group
                     input.form-control(type="number", ng-model="data.price")
-                    span.input-group-addon(data-translate="MORTGAGE_CALCULATOR.CURRENCY_UNIT")
+                    span.input-group-addon руб.
         .form-group
-            label.col-sm-4.control-label(data-translate="MORTGAGE_CALCULATOR.FIRST_PAYMENT")
+            label.col-sm-4.control-label Первоначальный платёж
             .col-sm-4
                 .input-group
                     input.form-control(type="number", ng-model="data.firstPayment")
-                    span.input-group-addon(data-translate="MORTGAGE_CALCULATOR.PERCENT_UNIT")
+                    span.input-group-addon руб.
         .form-group
-            label.col-sm-4.control-label(data-translate="MORTGAGE_CALCULATOR.PERIOD")
+            label.col-sm-4.control-label Срок
             .col-sm-4
                 .input-group
                     input.form-control(type="number", ng-model="data.period")
-                    span.input-group-addon(data-translate="MORTGAGE_CALCULATOR.PERIOD_UNIT")
+                    span.input-group-addon лет
 
     .result.form-horizontal
         .form-group
-            label.col-sm-4.control-label(data-translate="MORTGAGE_CALCULATOR.LOAN_AMOUNT")
+            label.col-sm-4.control-label Размер кредита
             .col-sm-4
                 p.form-control-static
-                    span(ng-bind="result.loanAmount | formattedNumber:0")
-                    span &nbsp;
-                    span(data-translate="MORTGAGE_CALCULATOR.CURRENCY_UNIT")
+                    span(ng-bind="(result.loanAmount | formattedNumber:0) + ' руб.'")
         .form-group
-            label.col-sm-4.control-label(data-translate="MORTGAGE_CALCULATOR.MONTHLY_PAYMENT")
+            label.col-sm-4.control-label Ежемесячный платёж
             .col-sm-4
                 p.form-control-static
-                    span(ng-bind="result.monthlyPayment | formattedNumber")
-                    span &nbsp;
-                    span(data-translate="MORTGAGE_CALCULATOR.CURRENCY_UNIT")
+                    span(ng-bind="(result.monthlyPayment | formattedNumber) + ' руб.'")
         .form-group
-            label.col-sm-4.control-label(data-translate="MORTGAGE_CALCULATOR.REQUIRED_MONTHLY_INCOME")
+            label.col-sm-4.control-label Необходимый ежемесячный доход
             .col-sm-4
                 p.form-control-static
-                    span(ng-bind="result.requiredMonthlyIncome | formattedNumber")
-                    span &nbsp;
-                    span(data-translate="MORTGAGE_CALCULATOR.CURRENCY_UNIT")
+                    span(ng-bind="(result.requiredMonthlyIncome | formattedNumber) + ' руб.'")
         .form-group
-            label.col-sm-4.control-label(data-translate="MORTGAGE_CALCULATOR.INTEREST_RATE")
+            label.col-sm-4.control-label Ставка по кредиту
             .col-sm-4
                 p.form-control-static
-                    span(ng-bind="result.rate | formattedNumber:1")
-                    span &nbsp;
-                    span(data-translate="MORTGAGE_CALCULATOR.PERCENT_UNIT")
+                    span(ng-bind="(result.rate | formattedNumber:1) + ' %'")
