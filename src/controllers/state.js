@@ -1,5 +1,5 @@
 /**
- * @ngdoc provider
+ * @ngdoc controller
  * @name ngs.controllers:StateCtrl
  *
  * @description

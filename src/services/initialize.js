@@ -1,5 +1,5 @@
 /**
- * @ngdoc provider
+ * @ngdoc service
  * @name ngs.services:initialize
  *
  * @description
