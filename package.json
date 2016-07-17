@@ -10,12 +10,13 @@
     "build.prod": "gulp --env=prod build",
     "fake-api": "gulp fake-api",
     "demo": "gulp demo",
-    "clean": "gulp clean"
+    "clean": "gulp clean",
+    "test": "gulp test"
   },
   "dependencies": {},
   "devDependencies": {
-    "connect-modrewrite": "0.9.0",
     "browser-sync": "2.13.0",
+    "connect-modrewrite": "0.9.0",
     "del": "2.2.0",
     "grunt": "1.0.1",
     "grunt-contrib-clean": "1.0.0",
@@ -43,6 +44,11 @@
     "gulp-uglify": "1.5.3",
     "gulp-useref": "3.1.0",
     "gulp-util": "3.0.7",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.1.1",
+    "karma-angular": "0.0.6",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
     "lodash": "4.13.1",
     "main-bower-files": "2.13.1",
     "require-dir": "0.3.0",
