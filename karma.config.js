@@ -27,10 +27,7 @@ module.exports = function (config) {
                 "includeDev": true
             }),
             [
-                '.dist-dev/js/config.js',
-                '.dist-dev/js/templates.js',
                 '.dist-dev/**/index.js',
-                '.dist-dev/**/!*.js',
                 '.dist-dev/**/*.js',
                 'test/**/*.spec.js'
             ]
