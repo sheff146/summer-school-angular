@@ -1,14 +1,30 @@
 describe('Calculator tests', function () {
-    var calculator;
+    var calculator, mockSettingsService;
+    var rate = 11.5;
 
-    beforeEach(module('ngs.services'));
+    beforeEach(function () {
+        module('ngs.services')
 
-    beforeEach(inject(function (calculatorService) {
-        calculator = calculatorService;
-    }));
+        mockSettingsService = {
+            get: function (name) {
+                if (name === 'rate') {
+                    return rate;
+                }
+            }
+        };
+
+        module(function ($provide) {
+            $provide.value('settingsService', mockSettingsService);
+        });
+
+        inject(function (calculatorService) {
+            calculator = calculatorService;
+        });
+    });
 
     afterEach(function () {
         calculator = null;
+        mockSettingsService = null;
     });
 
     function getDataForCalc(price, firstPayment, period) {
@@ -25,6 +41,6 @@ describe('Calculator tests', function () {
         // A...
         var result = calculator.count(data);
         // A...
-        expect(result.rate).toBe(13.5);
+        expect(result.rate).toBe(rate);
     });
 });
