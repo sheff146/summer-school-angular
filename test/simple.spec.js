@@ -152,28 +152,6 @@ describe("A spec using the fail function", function () {
 });
 
 /**
- ## Grouping Related Specs with `describe`
- The `describe` function is for grouping related specs. The string parameter is for naming the collection of specs, and will be concatenated with specs to make a spec's full name. This aids in finding specs in a large suite. If you name them well, your specs read as full sentences in traditional [BDD][bdd] style.
- [bdd]: http://en.wikipedia.org/wiki/Behavior-driven_development
- */
-describe("A spec", function () {
-    it("is just a function, so it can contain any code", function () {
-        var foo = 0;
-        foo += 1;
-
-        expect(foo).toEqual(1);
-    });
-
-    it("can have more than one expectation", function () {
-        var foo = 0;
-        foo += 1;
-
-        expect(foo).toEqual(1);
-        expect(true).toEqual(true);
-    });
-});
-
-/**
  ### Setup and Teardown
  To help a test suite DRY up any duplicated setup and teardown code, Jasmine provides the global `beforeEach`, `afterEach`, `beforeAll`, and `afterAll` functions.
  */
@@ -227,65 +205,6 @@ describe("A spec using beforeAll and afterAll", function () {
 
     it("does not reset foo between specs", function () {
         expect(foo).toEqual(2);
-    });
-});
-
-
-/**
- ### The `this` keyword
- Another way to share variables between a `beforeEach`, `it`, and `afterEach` is through the `this` keyword. Each spec's `beforeEach`/`it`/`afterEach` has the `this` as the same empty object that is set back to empty for the next spec's `beforeEach`/`it`/`afterEach`.
- */
-describe("A spec", function () {
-    beforeEach(function () {
-        this.foo = 0;
-    });
-
-    it("can use the `this` to share state", function () {
-        expect(this.foo).toEqual(0);
-        this.bar = "test pollution?";
-    });
-
-    it("prevents test pollution by having an empty `this` created for the next spec", function () {
-        expect(this.foo).toEqual(0);
-        expect(this.bar).toBe(undefined);
-    });
-});
-
-/**
- ### Nesting `describe` Blocks
- Calls to `describe` can be nested, with specs defined at any level. This allows a suite to be composed as a tree of functions. Before a spec is executed, Jasmine walks down the tree executing each `beforeEach` function in order. After the spec is executed, Jasmine walks through the `afterEach` functions similarly.
- */
-describe("A spec", function () {
-    var foo;
-
-    beforeEach(function () {
-        foo = 0;
-        foo += 1;
-    });
-
-    afterEach(function () {
-        foo = 0;
-    });
-
-    it("is just a function, so it can contain any code", function () {
-        expect(foo).toEqual(1);
-    });
-
-    it("can have more than one expectation", function () {
-        expect(foo).toEqual(1);
-        expect(true).toEqual(true);
-    });
-
-    describe("nested inside a second describe", function () {
-        var bar;
-
-        beforeEach(function () {
-            bar = 1;
-        });
-
-        it("can reference both scopes as needed", function () {
-            expect(foo).toEqual(bar);
-        });
     });
 });
 
