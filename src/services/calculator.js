@@ -6,10 +6,10 @@
  * Осуществляет вычисления по кредиту
  **/
 
-angular.module('ngs.services').service('calculatorService', function () {
+angular.module('ngs.services').service('calculatorService', function (settingsService) {
     class CalculatorService {
         constructor() {
-            this.rate = 13.5;// процентная ставка (%)
+            this.rate = settingsService.get('rate');// процентная ставка (%)
         }
 
         count(data) {

@@ -2,7 +2,8 @@
   "init": {
     "settings": {
       "locale": "ru",
-      "index_page": "home"
+      "index_page": "home",
+      "rate": 13.5
     },
     "translations": {
       "DEMO_DATA": "Это перевод текста. И переменная вставленная в него: {DATA}.",
