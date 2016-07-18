@@ -1,11 +1,13 @@
 describe('Calculator tests', function () {
     var calculator;
 
-    beforeEach(module('ngs.services'));
+    beforeEach(function () {
+        module('ngs.services');
 
-    beforeEach(inject(function (calculatorService) {
-        calculator = calculatorService;
-    }));
+        inject(function (calculatorService) {
+            calculator = calculatorService;
+        });
+    });
 
     afterEach(function () {
         calculator = null;
